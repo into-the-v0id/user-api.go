@@ -1,6 +1,6 @@
 # User API
 
-Simple JSON API to manage Users
+Simple JSON API for managing Users
 
 ## About
 
