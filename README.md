@@ -8,6 +8,15 @@ This is a simple test-project to get some experience with go lang. Do not use th
 
 ## Setup
 
+### With Docker
+
+```bash
+$ docker build -t user-api .
+$ docker run -itp 8080:8080 user-api
+```
+
+### Without Docker
+
 ```bash
 $ go run main.go
 ```
