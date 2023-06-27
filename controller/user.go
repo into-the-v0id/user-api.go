@@ -27,6 +27,7 @@ func UserCreate(writer http.ResponseWriter, request *http.Request) {
 	var data payload.CreateUser
 	err := service.ParseData(request, &data, writer)
 	if err != nil {
+		http.Error(writer, "400 Bad Request", http.StatusBadRequest)
 		return
 	}
 
