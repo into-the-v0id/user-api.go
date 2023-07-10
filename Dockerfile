@@ -1,8 +1,9 @@
 FROM golang:1.20-alpine as build
-COPY . /app
 WORKDIR /app
+COPY go.mod go.sum ./
+RUN go mod download
+COPY . ./
 RUN go build -o user-api
-RUN ls -Alp
 
 FROM alpine:latest
 WORKDIR /app
