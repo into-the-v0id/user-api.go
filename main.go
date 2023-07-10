@@ -42,6 +42,7 @@ func registerRoutes(router *mux.Router) {
 	route.RegisterUserRoutes(router.PathPrefix("/users").Subrouter())
 }
 
+// See https://stackoverflow.com/a/28746725
 func RecoverHandler() func(http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		return http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
